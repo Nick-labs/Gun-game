@@ -10,11 +10,13 @@ player_pos = (HALF_WIDTH, HALF_HEIGHT)
 player_angle = 0
 player_speed = 2
 
+# walls settings
+WALL_WIDTH = WIDTH / 12
+
+
 # bullet settings
-is_blast = False
 bullet_damage = 10
 bullet_speed = 5
-player_angle = 0
 
 # colors
 WHITE = (255, 255, 255)

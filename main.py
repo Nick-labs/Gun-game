@@ -2,6 +2,7 @@ import pygame
 from settings import *
 from player import Player
 from bullet import Bullet
+from map import game_map_init
 import math
 
 pygame.init()
@@ -9,6 +10,7 @@ sc = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 player = Player()
 bullets = []
+walls = game_map_init()
 
 while True:
     for event in pygame.event.get():
@@ -29,6 +31,8 @@ while True:
             bul.movement()
         else:
             bullets.remove(bul)
+    for wall in walls:
+        pygame.draw.rect(sc, WHITE, (wall[0], wall[1], WALL_WIDTH, WALL_WIDTH), 2)
 
     pygame.display.flip()
     clock.tick(FPS)
