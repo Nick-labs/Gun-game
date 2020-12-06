@@ -1,22 +1,28 @@
+import math
+
 # game settings
 WIDTH = 1200
 HEIGHT = 800
 HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
 FPS = 60
+TILE = 100
+
+# ray casting settings
+FOV = math.pi / 3
+HALF_FOV = FOV / 2
+NUM_RAYS = 6
+MAX_DEPTH = 800
+DELTA_ANGLE = FOV / NUM_RAYS
 
 # player settings
 player_pos = (HALF_WIDTH, HALF_HEIGHT)
 player_angle = 0
 player_speed = 2
 
-# walls settings
-WALL_WIDTH = WIDTH / 12
-
-
 # bullet settings
-bullet_damage = 10
-bullet_speed = 5
+# bullet_damage = 10
+# bullet_speed = 5
 
 # colors
 WHITE = (255, 255, 255)

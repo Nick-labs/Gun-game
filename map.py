@@ -1,20 +1,18 @@
 from settings import *
 
 
-def game_map_init():
-    game_map = """WWWWWWWWWWWW
-                  W..........W
-                  W.WWW...WW.W
-                  W...W...W..W
-                  W.......W..W
-                  W..WWW.....W
-                  W..W.......W
-                  WWWWWWWWWWWW"""
+text_map = """WWWWWWWWWWWW
+              W..........W
+              W.WWW...WW.W
+              W...W...W..W
+              W.......W..W
+              W..W.W.....W
+              W..W.......W
+              WWWWWWWWWWWW"""
 
-    walls = []
+world_map = set()
 
-    for j, row in enumerate(game_map.split()):
-        for i, letter in enumerate(row):
-            if letter == 'W':
-
-    return walls
+for j, row in enumerate(text_map.split()):
+    for i, char in enumerate(row):
+        if char == 'W':
+            world_map.add((i * TILE, j * TILE))
