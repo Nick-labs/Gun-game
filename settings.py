@@ -11,7 +11,7 @@ TILE = 100
 # ray casting settings
 FOV = math.pi / 3
 HALF_FOV = FOV / 2
-NUM_RAYS = 80
+NUM_RAYS = 120
 MAX_DEPTH = 800
 DELTA_ANGLE = FOV / NUM_RAYS
 SCALE = WIDTH // NUM_RAYS
@@ -29,7 +29,9 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (220, 0, 0)
 GREEN = (0, 220, 0)
-BLUE = (0, 0, 255)
+BLUE = (120,180,255)
+GRAY= (120,120,120)
+BROWN = (50,30,0)
 DARKGRAY = (40, 40, 40)
 PURPLE = (120, 0, 120)
 
