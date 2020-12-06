@@ -3,8 +3,8 @@ from settings import *
 
 text_map = """WWWWWWWWWWWW
               W.W...W....W
-              W.W.W.W.WW.W
-              W.W.WWW.W..W
+              W.W.WWW..W.W
+              W...W......W
               W.W.....W..W
               W.W..W..W.WW
               W....W.....W
