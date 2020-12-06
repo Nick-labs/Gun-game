@@ -9,13 +9,19 @@ class Drawing():
         self.sc = sc
         self.sc_map = sc_map
         self.font = pygame.font.SysFont('Arial', 36, bold=True)
+        self.textures = {'1': pygame.image.load('img/1.png').convert(),
+                         '2': pygame.image.load('img/2.png').convert(),
+                         'S': pygame.image.load('img/sky.png').convert()}
 
-    def background(self):
-        pygame.draw.rect(self.sc, SKYBLUE, (0, 0, WIDTH, HALF_HEIGHT))
+    def background(self, angle):
+        sky_offset = -20 * math.degrees(angle) % WIDTH
+        self.sc.blit(self.textures['S'], (sky_offset, 0))
+        self.sc.blit(self.textures['S'], (sky_offset - WIDTH, 0))
+        self.sc.blit(self.textures['S'], (sky_offset + WIDTH, 0))
         pygame.draw.rect(self.sc, BROWN, (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
 
     def world(self, player_pos, player_angle):
-        ray_casting(self.sc, player_pos, player_angle)
+        ray_casting(self.sc, player_pos, player_angle, self.textures)
 
     def fps(self, clock):
         display_fps = str(int(clock.get_fps()))

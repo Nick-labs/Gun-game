@@ -24,7 +24,7 @@ while True:
 
     player.movement()
 
-    drawing.background()
+    drawing.background(player.angle)
     drawing.world(player.pos, player.angle)
     drawing.fps(clock)
     drawing.mini_map(player)
