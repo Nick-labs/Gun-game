@@ -2,12 +2,12 @@ from settings import *
 
 
 text_map = """WWWWWWWWWWWW
-              W..........W
-              W.WWW...WW.W
-              W...W...W..W
-              W.......W..W
-              W..W.W.....W
-              W..W.......W
+              W.W...W....W
+              W.W.W.W.WW.W
+              W.W.WWW.W..W
+              W.W.....W..W
+              W.W..W..W.WW
+              W....W.....W
               WWWWWWWWWWWW"""
 
 world_map = set()

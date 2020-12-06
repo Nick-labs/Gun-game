@@ -14,9 +14,10 @@ HALF_FOV = FOV / 2
 NUM_RAYS = 40
 MAX_DEPTH = 800
 DELTA_ANGLE = FOV / NUM_RAYS
-# DIST = NUM_RAYS / (2 * math.tan(HALF_FOV))
-# PROJ_COEFF = 3 * DIST * TILE
-# SCALE = WIDTH // NUM_RAYS
+SCALE = WIDTH // NUM_RAYS
+DIST = NUM_RAYS / (2 * math.tan(HALF_FOV))
+PROJ_COEFF = DIST * TILE * 6
+
 
 # player settings
 player_pos = (HALF_WIDTH, HALF_HEIGHT)
